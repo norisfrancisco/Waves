@@ -1,6 +1,6 @@
 # Waves_Maputo
 
-Este projeto realiza uma análise da ocorrência e frequência de extremos térmicos — ondas de calor e ondas de frio — no município de Maputo, com base em dados diários de temperatura do conjunto de reanálise ERA5-Land, desenvolvido pelo Centro Europeu de Previsões Meteorológicas de Médio Prazo (ECMWF). O período analisado compreende 30 anos (1991–2020), fornecendo uma base robusta para identificação de tendências climáticas e variabilidade sazonal.
+Este projeto realiza uma análise da ocorrência e frequência de extremos térmicos — ondas de calor e ondas de frio, com base em dados diários de temperatura do conjunto de reanálise ERA5-Land, desenvolvido pelo Centro Europeu de Previsões Meteorológicas de Médio Prazo (ECMWF). O período analisado compreende 30 anos (1991–2020), fornecendo uma base robusta para identificação de tendências climáticas e variabilidade sazonal.
 
 Os dados brutos foram inicialmente obtidos com resolução horária e, posteriormente, agregados em valores diários de temperatura máxima (Tmax), mínima (Tmin) e média (Tmed). O pré-processamento dos dados incluiu tratamento de ausências utilizando imputação multivariada por IterativeSVD, precedida de normalização com StandardScaler. A qualidade da imputação foi verificada com validação cruzada, resultando em um RMSE inferior a 1 °C.
 
