@@ -1,4 +1,4 @@
-# Waves_Maputo
+# Waves
 
 Este projeto realiza uma análise da ocorrência e frequência de extremos térmicos — ondas de calor e ondas de frio, com base em dados diários de temperatura do conjunto de reanálise ERA5-Land, desenvolvido pelo Centro Europeu de Previsões Meteorológicas de Médio Prazo (ECMWF). O período analisado compreende 30 anos (1991–2020), fornecendo uma base robusta para identificação de tendências climáticas e variabilidade sazonal.
 
