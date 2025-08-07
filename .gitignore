@@ -1,0 +1,12 @@
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+.env
+.venv
+*.log
+*.xlsx
+*.png
+*.pdf
+.DS_Store
+*.sqlite3
+*.h5
