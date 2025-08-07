@@ -1,8 +1,8 @@
 # =============================================================================
 # OCORRÊNCIA E FREQUÊNCIA DE ONDAS DE CALOR E FRIO EM MAPUTO
 # Baseado em padrões WMO/IPCC/FAO/INPE
-# Autor: [Seu Nome]
-# Data: [Atualizar para submissão]
+# Autor: FRANCISCO NORIS
+# Data: 07 DE AGOSTO DE 2025
 # =============================================================================
 
 import pandas as pd
@@ -20,8 +20,8 @@ warnings.filterwarnings('ignore')
 sns.set(style='whitegrid')
 
 # === CONFIGURAÇÕES ===
-caminho_arquivo = "C:/Python/Waves/maputoo.xlsx"
-caminho_saida = "C:/Users/Dell/OneDrive/Rstudio/CONGRESSOJOH/EXTREMOS_PUBLICACAO"
+caminho_arquivo = "..."
+caminho_saida = "..."
 os.makedirs(caminho_saida, exist_ok=True)
 
 # === 1. LEITURA E PRÉ-PROCESSAMENTO ===
