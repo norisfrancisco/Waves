@@ -1,6 +1,6 @@
 # Waves Maputo
 
-Este repositório apresenta uma análise abrangente da ocorrência e frequência de extremos térmicos (ondas de calor e frio) na cidade de Maputo, com base em dados de reanálise ERA5-Land, utilizando métodos reconhecidos pela OMM, IPCC e FAO.
+Este repositório apresenta uma análise abrangente da ocorrência e frequência de extremos térmicos (ondas de calor e frio), com base em dados de reanálise ERA5-Land, utilizando métodos reconhecidos pela OMM, IPCC e FAO.
 
 ## Objetivo
 
