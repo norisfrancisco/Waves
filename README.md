@@ -1,72 +1,69 @@
 # Waves
 
-Este repositório apresenta uma análise abrangente da ocorrência e frequência de extremos térmicos (ondas de calor e frio), com base em dados de reanálise ERA5-Land, utilizando métodos reconhecidos pela OMM, IPCC e FAO.
+Este repositório apresenta uma análise detalhada da ocorrência e frequência de ondas de calor e de frio em Maputo, Moçambique, utilizando dados de reanálise ERA5-Land (ECMWF) e métodos estatísticos reconhecidos por instituições como a OMM e o IPCC.
 
 ## Objetivo
 
-Investigar padrões sazonais e tendências climáticas no período de 1991 a 2020, identificando eventos extremos e gerando índices climáticos relevantes para análise de risco e suporte à tomada de decisão em setores como agricultura e saúde pública.
+Investigar a variabilidade sazonal e as tendências climáticas associadas a extremos térmicos no período de 1991 a 2020, contribuindo para o entendimento local dos efeitos das mudanças climáticas.
 
 ## Estrutura do Projeto
 
 ```
-Waves_Maputo/
-├── data/                 # Dados originais e processados (.xlsx)
-├── notebooks/            # Notebooks Jupyter com a análise
-├── outputs/              # Figuras geradas (PNG)
-├── src/                  # Scripts Python reutilizáveis (.py)
-├── README.md             # Este arquivo
+Waves/
+├── data/                 # Arquivos de entrada (.xlsx)
+├── notebooks/            # Jupyter Notebooks com análise e gráficos
+├── outputs/              # Figuras e resultados exportados
+├── src/                  # Scripts em Python (.py)
 ├── .gitignore            # Arquivos ignorados pelo Git
+├── README.md             # Este documento
 ```
 
-## Principais Ferramentas e Bibliotecas
+## Bibliotecas Utilizadas
 
-* Python 3
-* pandas, numpy, matplotlib, seaborn
-* fancyimpute (IterativeSVD)
-* scikit-learn (StandardScaler)
+* `pandas`, `numpy` para manipulação de dados
+* `matplotlib`, `seaborn` para visualização
+* `fancyimpute` para imputar valores faltantes (IterativeSVD)
+* `scikit-learn` para padronização de variáveis
 
 ## Metodologia
 
-* **Fonte dos dados:** ERA5-Land (ECMWF)
-* **Período:** 1991–2020
-* **Climatologia:** Calculada com base na média e percentis diários
-* **Critério de extremos:**
+* **Base de dados:** ERA5-Land (resolução horária agregada a diária)
+* **Período:** 1991 a 2020 (30 anos)
+* **Climatologia:** Calculada com base em médias e percentis diários
+* **Definição de extremos:**
 
-  * **TX90p:** Temperaturas máximas acima do percentil 90
-  * **TN10p:** Temperaturas mínimas abaixo do percentil 10
-* **Ondas de calor/frio:** Eventos com ≥3 dias consecutivos de extremos
-* **Imputação:** IterativeSVD + Padronização (StandardScaler)
+  * Ondas de calor: Tmax > percentil 90 por ≥3 dias consecutivos
+  * Ondas de frio: Tmin < percentil 10 por ≥3 dias consecutivos
+* **Cálculo de índices climáticos (ETCCDI):** TXx, TNx, FD, TR, DTR, entre outros
 
-## Resultados Produzidos
+## Resultados Exportados
 
-* **Série temporal tratada** (`Cleaned_Full_Series.xlsx`)
-* **Climatologia 1991-2020** (`Climatology_1991_2020.xlsx`)
-* **Índices de extremos** (`Extreme_Indices_TX90p_TN10p.xlsx`)
-* **Resumo sazonal** (`Seasonal_Summary.xlsx`)
-* **Ondas de calor e frio** (`Heat_Cold_Waves_Maputo.xlsx`)
-* **Gráficos PNG salvos em `outputs/`**
+* `Cleaned_Full_Series.xlsx`
+* `Climatology_1991_2020.xlsx`
+* `Extreme_Indices_TX90p_TN10p.xlsx`
+* `Seasonal_Summary.xlsx`
+* `Heat_Cold_Waves_Maputo.xlsx`
+* Gráficos salvos em PNG (mapas, boxplots, linhas temporais)
 
-## Como Executar
+## Como Usar
 
-1. Clone o repositório:
+```bash
+# Clone o repositório
+https://github.com/norisfrancisco/Waves.git
+cd Waves
 
-   ```bash
-   git clone https://github.com/norisfrancisco/Waves_Maputo.git
-   cd Waves_Maputo
-   ```
-2. Instale as dependências (recomendado usar virtualenv ou conda):
+# Instale as dependências
+pip install -r requirements.txt
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Execute os notebooks em `notebooks/` ou scripts em `src/`
+# Execute os notebooks ou scripts em src/
+```
 
 ## Autor
 
 **Francisco Noris**
-Maputo, Moçambique
+
+Para sugestões, dúvidas ou colaborações, utilize a aba de Issues ou envie um Pull Request.
 
 ---
 
-Projeto em conformidade com os padrões WMO/IPCC/FAO.
-Para colaborações ou sugestões, abra uma *issue* ou envie um *pull request*.
+Projeto desenvolvido com base em recomendações da World Meteorological Organization (WMO), Intergovernmental Panel on Climate Change (IPCC) e literatura científica recente.
